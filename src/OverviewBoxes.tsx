@@ -4,7 +4,12 @@ import { Flex } from '@chakra-ui/react'
 const OverviewBoxes = () => {
   const names = ['Team City', 'Github', 'AWS', 'Slack', 'DataDog', 'Outlook']
   return (
-    <Flex gap={5} flexWrap={'wrap'} alignContent={'flex-start'}>
+    <Flex
+      gap={5}
+      flexWrap={'wrap'}
+      alignContent={'flex-start'}
+      overflowY={'scroll'}
+    >
       {names.map((name) => (
         <OverviewBox title={name} />
       ))}
