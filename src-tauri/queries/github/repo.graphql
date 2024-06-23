@@ -1,0 +1,31 @@
+{
+    viewer {
+        repositories(first: 10, ownerAffiliations: OWNER) {
+            nodes {
+                name
+                pullRequests(first: 100, states: OPEN) {
+                    nodes {
+                        title
+                        url
+                        createdAt
+                        updatedAt
+                        author {
+                            login
+                        }
+                        changedFiles
+                        additions
+                        deletions
+                        labels(first: 10) {
+                            nodes {
+                                name
+                                color
+                                description
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
