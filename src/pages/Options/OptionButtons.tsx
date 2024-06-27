@@ -1,5 +1,7 @@
 import OptionButton from './OptionButton.tsx'
 
+const options = ['Github', 'Jira', 'Slack', 'Gmail', 'DataDog', 'AWS']
+
 const OptionButtons = () => {
   return (
     <div
@@ -11,9 +13,9 @@ const OptionButtons = () => {
         maxWidth: '200px',
       }}
     >
-      <OptionButton />
-      <OptionButton />
-      <OptionButton />
+      {options.map((option) => (
+        <OptionButton key={option} title={option} />
+      ))}
     </div>
   )
 }

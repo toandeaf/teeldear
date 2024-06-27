@@ -1,10 +1,10 @@
 import './App.css'
-import OptionsAndOverviews from './OptionsAndOverviews.tsx'
+import OverviewPage from './pages/OverviewPage.tsx'
 
 function App() {
   return (
     <div className={'container'}>
-      <OptionsAndOverviews />
+      <OverviewPage />
     </div>
   )
 }

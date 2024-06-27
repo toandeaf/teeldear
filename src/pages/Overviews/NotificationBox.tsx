@@ -22,7 +22,7 @@ const NotificationBox: FC<Props> = ({
       pt={1}
       pb={1}
       pl={1}
-      width={'110px'}
+      width={'160px'}
       gap={2}
     >
       <Avatar
