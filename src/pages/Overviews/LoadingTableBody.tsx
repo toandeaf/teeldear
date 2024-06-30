@@ -7,6 +7,7 @@ interface Props {
 
 const LoadingTableBody: FC<Props> = ({ columns }) => {
   const prosColumns = Array.from({ length: columns }, (_, index) => index)
+  // TODO cool queue idea
 
   return (
     <Tbody>

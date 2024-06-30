@@ -15,12 +15,7 @@ const PullRequestsTable = () => {
 
   return (
     <Flex className="neubrutalist-box-fixed" width={'98%'}>
-      {/*<Flex justifyContent={'center'} alignItems={'center'}>*/}
-      {/*  <Box height={10} width={10}>*/}
-      {/*    <Image src={'/github.jpg'} />*/}
-      {/*  </Box>*/}
-      {/*</Flex>*/}
-      <Table variant="striped" colorScheme="green" size={'sm'}>
+      <Table size={'sm'}>
         <Thead>
           <Tr>
             <Th>Repo</Th>
