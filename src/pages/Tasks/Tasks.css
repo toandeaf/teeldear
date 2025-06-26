@@ -2,7 +2,6 @@
     display: flex;
     height: calc(100% - 10px);
     width: 100%;
-
     justify-content: space-between;
     gap: 10px;
 }

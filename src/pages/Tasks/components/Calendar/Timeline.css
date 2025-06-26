@@ -1,0 +1,47 @@
+.timeline-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--card);
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: black;
+}
+
+.timeline-hours {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 1;
+}
+
+.timeline-hour {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+
+.timeline-notch {
+    width: 12px;
+    height: 2px;
+    background-color: red;
+    margin-left: 34px;
+}
+
+.timeline-label {
+    font-size: 12px;
+    font-family: sans-serif;
+}

@@ -2,7 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    background: #ffe5e5;
+    /*margin-bottom: 20px;*/
+    background: var(--container);
     height: 75px;
+}
+
+.input {
+    height: 30px;
+    width: 200px;
+    background-color: var(--card);
 }

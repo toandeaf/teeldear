@@ -4,6 +4,9 @@
     --accent: #f15a24;
     --border: 2px solid #111;
     --radius: 4px;
+    --card:  #fff8dc;
+    --container: #ffe5e5;
+    --button: #e5ab89;
 }
 
 * {

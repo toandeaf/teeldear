@@ -2,6 +2,24 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    background: #ffe5e5;
+    background: var(--container);
     height: 100%;
+}
+
+.categoryCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: var(--card);
+    width: calc(33.333% - 20px);
+}
+
+.categoryTasks {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+    gap: 10px;
 }

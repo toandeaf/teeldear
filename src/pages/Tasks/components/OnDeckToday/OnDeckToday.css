@@ -1,8 +1,32 @@
 .onDeckToday {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: var(--container);
+}
+
+.onDeckContainer {
+    display: flex;
+    gap: 50px;
+}
+
+.onDeckBalls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    background-color: var(--card);
+}
+
+.taskSummary {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    background: #ffe5e5;
-    height: 75px;
+    height: 100%;
 }

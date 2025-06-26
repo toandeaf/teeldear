@@ -1,6 +1,9 @@
 .calendarCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     height: 100%;
-    background: #ffe5e5;
+    background: var(--container);
     border-radius: var(--radius);
     box-shadow: 4px 4px 0 var(--fg);
     padding: 20px;
