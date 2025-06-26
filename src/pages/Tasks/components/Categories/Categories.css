@@ -6,6 +6,14 @@
     height: 100%;
 }
 
+.categoriesCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
 .categoryCard {
     display: flex;
     flex-direction: column;

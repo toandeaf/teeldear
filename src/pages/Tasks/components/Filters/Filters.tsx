@@ -1,10 +1,9 @@
 import { FC } from 'react'
-import Card from 'components/Card/Card.tsx'
 import './Filters.css'
 
 const Filters: FC = () => {
   return (
-    <Card className={'filterBar'}>
+    <div className={'filterBar'}>
       <input placeholder={'Quick search...'} className="input" />
       <select className="input">
         <option value="all">Sort by</option>
@@ -19,7 +18,7 @@ const Filters: FC = () => {
         <option value="project3">Project 3</option>
         <option value="project4">Add filter +</option>
       </select>
-    </Card>
+    </div>
   )
 }
 
