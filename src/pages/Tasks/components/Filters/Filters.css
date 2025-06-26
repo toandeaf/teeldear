@@ -1,0 +1,8 @@
+.filterBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #ffe5e5;
+    height: 75px;
+}

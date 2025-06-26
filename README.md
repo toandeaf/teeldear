@@ -1,3 +1,3 @@
-# TEELDEAR - TL;DR
+# TL:DR - it's not that deep.
 
-* To run locally - bun run tauri dev
+Team, workflow and project management tool aimed at cutting through the bullshit, corporate jargon and reems of non-sense documentation.

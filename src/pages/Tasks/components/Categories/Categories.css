@@ -1,0 +1,7 @@
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #ffe5e5;
+    height: 100%;
+}

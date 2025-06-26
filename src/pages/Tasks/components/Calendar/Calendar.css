@@ -1,0 +1,7 @@
+.calendarCard {
+    height: 100%;
+    background: #ffe5e5;
+    border-radius: var(--radius);
+    box-shadow: 4px 4px 0 var(--fg);
+    padding: 20px;
+}
