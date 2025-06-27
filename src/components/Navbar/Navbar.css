@@ -20,7 +20,6 @@
     padding: 10px;
     text-align: center;
     background: #e0f0ff;
-    border-radius: var(--radius);
     box-shadow: 4px 4px 0 var(--fg);
 }
 
@@ -31,13 +30,17 @@
 }
 
 .nav a, .footer a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
     text-decoration: none;
     color: var(--fg);
     border: var(--border);
     padding: 12px;
     text-align: center;
     background: var(--button);
-    border-radius: var(--radius);
     box-shadow: 4px 4px 0 var(--fg);
     transition: all 0.3s ease;
 }

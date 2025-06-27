@@ -4,9 +4,9 @@
     height: 100%;
     background-color: var(--card);
     border: 2px solid black;
-    border-radius: 20px;
     padding: 10px;
     overflow: hidden;
+    box-shadow: 4px 4px 0 var(--fg);
 }
 
 .timeline-line {
