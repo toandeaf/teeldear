@@ -10,16 +10,20 @@ const App = () => {
   const [activeDay, setActiveDay] = useState(2)
 
   return (
-    <div className="flex h-screen gap-4 bg-zinc-800 p-4">
+    <div className="flex h-screen bg-zinc-800 font-mono">
       <Sidebar activeNav={activeNav} onNavChange={setActiveNav} />
 
-      <main className="flex-1 overflow-auto border-4 border-black bg-zinc-100 p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-        <OnDeckToday />
-        <SearchFilters />
-        <CategoryGrid />
-      </main>
+      <div className="flex flex-1 gap-4 p-4">
+        <main className="flex flex-1 flex-col gap-4 overflow-auto">
+          <OnDeckToday />
+          <div className="border-4 border-black bg-zinc-100 p-5 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+            <SearchFilters />
+            <CategoryGrid />
+          </div>
+        </main>
 
-      <CalendarPanel activeDay={activeDay} onDayChange={setActiveDay} />
+        <CalendarPanel activeDay={activeDay} onDayChange={setActiveDay} />
+      </div>
     </div>
   )
 }

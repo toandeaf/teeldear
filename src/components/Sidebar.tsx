@@ -1,4 +1,4 @@
-import type { FC } from 'react'
+import { useState, type FC } from 'react'
 import {
   LayoutList,
   Users,
@@ -7,9 +7,10 @@ import {
   FolderOpen,
   Archive,
   Settings,
+  ChevronLeft,
+  ChevronRight,
   type LucideIcon,
 } from 'lucide-react'
-import { Panel, PanelHeader } from './ui/Panel'
 
 type NavItem = {
   name: string
@@ -35,22 +36,51 @@ type SidebarProps = {
 }
 
 export const Sidebar: FC<SidebarProps> = ({ activeNav, onNavChange }) => {
+  const [collapsed, setCollapsed] = useState(false)
+
   return (
-    <Panel className="w-48">
-      <PanelHeader>
-        <div className="border-4 border-black bg-white px-4 py-3 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-          <span className="font-mono text-2xl font-black tracking-tight text-black">
-            TL;DR
+    <aside
+      className={`relative flex h-full flex-col border-r-4 border-black bg-zinc-100 transition-all duration-300 ${
+        collapsed ? 'w-16' : 'w-56'
+      }`}
+    >
+      <div className="border-b-4 border-black bg-violet-500 p-4">
+        <div className="border-4 border-black bg-white px-3 py-2 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+          <span className="font-mono text-xl font-black tracking-tight text-black">
+            {collapsed ? 'T' : 'TL;DR'}
           </span>
         </div>
-      </PanelHeader>
+      </div>
 
-      <NavGroup items={navItems} activeNav={activeNav} onNavChange={onNavChange} />
+      <NavGroup
+        items={navItems}
+        activeNav={activeNav}
+        onNavChange={onNavChange}
+        collapsed={collapsed}
+      />
 
-      <div className="mx-4 my-2 border-t-2 border-zinc-300" />
+      <div
+        className={`my-2 border-t-2 border-zinc-300 ${collapsed ? 'mx-2' : 'mx-4'}`}
+      />
 
-      <NavGroup items={secondaryNav} activeNav={activeNav} onNavChange={onNavChange} />
-    </Panel>
+      <NavGroup
+        items={secondaryNav}
+        activeNav={activeNav}
+        onNavChange={onNavChange}
+        collapsed={collapsed}
+      />
+
+      <button
+        onClick={() => setCollapsed(!collapsed)}
+        className="absolute -right-3 top-20 text-black flex h-6 w-6 items-center justify-center border-2 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-transform hover:scale-110 cursor-pointer"
+      >
+        {collapsed ? (
+          <ChevronRight size={14} strokeWidth={3} />
+        ) : (
+          <ChevronLeft size={14} strokeWidth={3} />
+        )}
+      </button>
+    </aside>
   )
 }
 
@@ -58,23 +88,32 @@ type NavGroupProps = {
   items: NavItem[]
   activeNav: string
   onNavChange: (name: string) => void
+  collapsed: boolean
 }
 
-const NavGroup: FC<NavGroupProps> = ({ items, activeNav, onNavChange }) => {
+const NavGroup: FC<NavGroupProps> = ({
+  items,
+  activeNav,
+  onNavChange,
+  collapsed,
+}) => {
   return (
-    <nav className="flex flex-col gap-2 p-4">
+    <nav className={`flex flex-col gap-2 ${collapsed ? 'p-2' : 'p-4'}`}>
       {items.map((item) => (
         <button
           key={item.name}
           onClick={() => onNavChange(item.name)}
-          className={`flex items-center gap-3 border-3 border-black px-4 py-2.5 text-left text-sm font-bold transition-all ${
+          title={collapsed ? item.name : undefined}
+          className={`flex items-center border-3 border-black text-left text-sm font-bold transition-all ${
+            collapsed ? 'justify-center p-2.5' : 'gap-3 px-4 py-2.5'
+          } ${
             activeNav === item.name
               ? 'bg-violet-500 text-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]'
-              : 'bg-white text-black hover:bg-zinc-200'
+              : 'bg-white text-black hover:bg-zinc-200 cursor-pointer'
           }`}
         >
           <item.icon size={18} strokeWidth={2.5} />
-          <span>{item.name}</span>
+          {!collapsed && <span>{item.name}</span>}
         </button>
       ))}
     </nav>
