@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Sidebar } from './components/Sidebar'
 import { CalendarPanel } from './components/CalendarPanel'
-import { Tasks } from './pages/Tasks.tsx'
-import { Dashboard } from './pages/Dashboard.tsx'
+import { Tasks } from './pages/Tasks'
+import { Dashboard } from './pages/Dashboard'
 
 const App = () => {
   const [activeNav, setActiveNav] = useState('Tasks')
