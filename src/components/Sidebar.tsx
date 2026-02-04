@@ -5,6 +5,7 @@ import {
   Calendar,
   Bell,
   FolderOpen,
+  LayoutDashboard,
   Archive,
   Settings,
   ChevronLeft,
@@ -18,6 +19,7 @@ type NavItem = {
 }
 
 const navItems: NavItem[] = [
+  { name: 'Dashboard', icon: LayoutDashboard },
   { name: 'Tasks', icon: LayoutList },
   { name: 'Team', icon: Users },
   { name: 'Calendar', icon: Calendar },

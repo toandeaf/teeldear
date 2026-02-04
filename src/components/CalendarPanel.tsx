@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { Panel } from './ui/Panel'
+import { Panel } from './Panel.tsx'
 
 const days = ['M', 'T', 'W', 'T', 'F']
 
@@ -20,7 +20,10 @@ type CalendarPanelProps = {
   onDayChange: (day: number) => void
 }
 
-export const CalendarPanel: FC<CalendarPanelProps> = ({ activeDay, onDayChange }) => {
+export const CalendarPanel: FC<CalendarPanelProps> = ({
+  activeDay,
+  onDayChange,
+}) => {
   return (
     <Panel className="w-56">
       <DayPicker activeDay={activeDay} onDayChange={onDayChange} />

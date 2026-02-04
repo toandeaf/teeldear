@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { Card } from './ui/Card'
+import { Card } from './Card.tsx'
 import { StatusCounterPill } from './StatusCounterPill'
 import type { Category } from './CategoryGrid.config'
 
