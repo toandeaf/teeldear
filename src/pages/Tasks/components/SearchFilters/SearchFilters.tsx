@@ -1,22 +1,28 @@
 import type { FC } from 'react'
+import { Search } from 'lucide-react'
 
 export const SearchFilters: FC = () => {
   return (
-    <div className="mb-5 flex gap-4 text-black">
-      <input
-        type="text"
-        placeholder="Quick search..."
-        className="flex-1 border-4 border-black bg-white px-4 py-3 text-sm font-bold placeholder:text-zinc-400 focus:outline-none focus:ring-4 focus:ring-violet-400"
-      />
-      <select className="border-4 border-black bg-white px-4 py-3 text-sm font-bold focus:outline-none">
-        <option>Category</option>
-        <option>Date</option>
-        <option>Priority</option>
+    <div className="mb-4 flex gap-3">
+      <div className="flex-1 flex items-center border-2 border-black bg-white px-3 py-2">
+        <Search size={16} className="text-zinc-400 mr-2" strokeWidth={2.5} />
+        <input
+          type="text"
+          placeholder="Search tasks..."
+          className="flex-1 text-sm font-bold text-zinc-900 placeholder:text-zinc-400 focus:outline-none"
+        />
+      </div>
+      <select className="border-2 border-black bg-white px-3 py-2 text-sm font-bold text-zinc-700 focus:outline-none cursor-pointer">
+        <option>All Categories</option>
+        <option>Tickets</option>
+        <option>Helping</option>
+        <option>Meetings</option>
       </select>
-      <select className="border-4 border-black bg-white px-4 py-3 text-sm font-bold focus:outline-none">
-        <option>Quick filters</option>
-        <option>Active</option>
-        <option>Completed</option>
+      <select className="border-2 border-black bg-white px-3 py-2 text-sm font-bold text-zinc-700 focus:outline-none cursor-pointer">
+        <option>All Status</option>
+        <option>On Track</option>
+        <option>At Risk</option>
+        <option>Blocked</option>
       </select>
     </div>
   )

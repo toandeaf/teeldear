@@ -12,14 +12,14 @@ const App = () => {
     <div className="flex h-screen bg-zinc-800 font-mono">
       <Sidebar activeNav={activeNav} onNavChange={setActiveNav} />
 
-      <div className="flex flex-1 gap-4 p-4 overflow-hidden">
-        <main className="flex-1 overflow-y-auto">
+      <div className="flex-1 p-4 overflow-hidden">
+        <main className="h-full overflow-y-auto">
           {activeNav === 'Tasks' && <Tasks />}
           {activeNav === 'Dashboard' && <Dashboard />}
         </main>
-
-        <CalendarPanel activeDay={activeDay} onDayChange={setActiveDay} />
       </div>
+
+      <CalendarPanel activeDay={activeDay} onDayChange={setActiveDay} />
     </div>
   )
 }

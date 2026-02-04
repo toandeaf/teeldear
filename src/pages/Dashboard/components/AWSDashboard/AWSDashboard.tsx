@@ -19,7 +19,9 @@ export const AWSDashboard: FC = () => (
           <div className="flex items-center gap-3">
             <StatusBadge status={service.status} />
             <div>
-              <span className="font-bold text-sm">{service.name}</span>
+              <span className="font-bold text-sm text-zinc-900">
+                {service.name}
+              </span>
               <div className="text-xs text-zinc-600">
                 {'running' in service &&
                   'total' in service &&
@@ -68,8 +70,8 @@ export const AWSDashboard: FC = () => (
                   : 'border-yellow-300 bg-yellow-50'
               }`}
             >
-              <span>
-                <span className="font-mono font-bold">[{alert.service}]</span>{' '}
+              <span className={'text-zinc-600'}>
+                <span className="font-mono font-bold ">[{alert.service}]</span>{' '}
                 {alert.message}
               </span>
               <span className="text-zinc-600">{alert.time}</span>

@@ -6,7 +6,7 @@ import DatadogDashboard from './components/DatadogDashboard'
 
 export const Dashboard: FC = () => {
   return (
-    <div className="grid grid-cols-2 gap-4 w-full items-start">
+    <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full h-full">
       <GitHubDashboard />
       <AWSDashboard />
       <KubernetesDashboard />

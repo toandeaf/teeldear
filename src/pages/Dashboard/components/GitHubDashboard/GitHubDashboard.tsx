@@ -83,7 +83,7 @@ export const GitHubDashboard: FC = () => (
         </div>
       ))}
     </div>
-    <div className="mt-4 flex items-center justify-between border-t-2 border-zinc-200 pt-3">
+    <div className="mt-4 flex items-center justify-between border-t-2 border-zinc-200 pt-3 text-zinc-600">
       <div className="flex gap-4 text-xs">
         <span className="flex items-center gap-1">
           <span className="h-2 w-2 rounded-full bg-emerald-400" /> 1 Approved

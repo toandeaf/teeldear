@@ -12,14 +12,14 @@ export const StatusCounterSquare: FC<StatusCounterSquareProps> = ({
 }) => {
   const bgClass =
     color === 'green'
-      ? 'bg-emerald-500'
+      ? 'bg-emerald-400 border-emerald-600'
       : color === 'yellow'
-        ? 'bg-yellow-400'
-        : 'bg-red-500'
+        ? 'bg-yellow-400 border-yellow-600'
+        : 'bg-red-400 border-red-600'
 
   return (
     <div
-      className={`flex h-8 w-8 items-center justify-center border-2 border-black font-bold text-black ${bgClass}`}
+      className={`flex h-7 w-7 items-center justify-center border-2 text-xs font-black text-black ${bgClass}`}
     >
       {count}
     </div>

@@ -20,7 +20,9 @@ export const KubernetesDashboard: FC = () => (
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
               <StatusBadge status={cluster.status} />
-              <span className="font-bold text-sm">{cluster.name}</span>
+              <span className="font-bold text-sm text-zinc-600">
+                {cluster.name}
+              </span>
             </div>
             <span className="text-xs text-zinc-600">
               {cluster.nodes.ready}/{cluster.nodes.total} nodes

@@ -109,14 +109,14 @@ export const DatadogDashboard: FC = () => (
         {datadogMetrics.alerts.map((alert, i) => (
           <div
             key={i}
-            className={`flex items-center justify-between rounded border-2 px-2 py-1.5 text-xs ${
+            className={`flex items-center justify-between rounded border-2 px-2 py-1.5 text-xs text-zinc-600 ${
               alert.severity === 'critical'
                 ? 'border-red-300 bg-red-50'
                 : 'border-yellow-300 bg-yellow-50'
             }`}
           >
             <span className="truncate flex-1">{alert.title}</span>
-            <span className="text-zinc-600 ml-2">{alert.time}</span>
+            <span className="ml-2">{alert.time}</span>
           </div>
         ))}
       </div>

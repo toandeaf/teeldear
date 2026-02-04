@@ -12,8 +12,8 @@ const statusCounts = {
 
 export const OnDeckToday: FC = () => {
   return (
-    <div className="border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-      <div className="flex items-center justify-between border-b-4 border-black bg-violet-500 px-5 py-3">
+    <div className="flex flex-col border-4 border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+      <div className="flex items-center justify-between border-b-4 border-black bg-violet-500 px-4 py-3">
         <div className="flex items-center gap-2">
           <Zap
             size={20}
@@ -21,7 +21,7 @@ export const OnDeckToday: FC = () => {
             className="text-yellow-300"
             fill="currentColor"
           />
-          <h2 className="text-lg font-black uppercase tracking-wide text-white">
+          <h2 className="text-base font-black uppercase tracking-wide text-white">
             On Deck Today
           </h2>
         </div>
@@ -31,7 +31,7 @@ export const OnDeckToday: FC = () => {
           <StatusCounterSquare color="red" count={statusCounts.red} />
         </div>
       </div>
-      <div className="space-y-3 bg-zinc-100 p-4">
+      <div className="space-y-2 bg-zinc-50 p-4">
         {tasks.map((task, i) => (
           <TaskRow key={i} task={task} />
         ))}

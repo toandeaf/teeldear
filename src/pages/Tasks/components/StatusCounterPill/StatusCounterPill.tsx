@@ -12,17 +12,24 @@ export const StatusCounterPill: FC<StatusCounterPillProps> = ({
 }) => {
   if (count === 0) return null
 
+  const bgClass =
+    color === 'green'
+      ? 'bg-emerald-100 border-emerald-300 text-emerald-700'
+      : color === 'yellow'
+        ? 'bg-yellow-100 border-yellow-300 text-yellow-700'
+        : 'bg-red-100 border-red-300 text-red-700'
+
   const dotClass =
     color === 'green'
-      ? 'bg-emerald-400'
+      ? 'bg-emerald-500'
       : color === 'yellow'
-        ? 'bg-yellow-400'
-        : 'bg-red-400'
+        ? 'bg-yellow-500'
+        : 'bg-red-500'
 
   return (
-    <div className="flex items-center gap-1.5 rounded-md bg-zinc-800 px-2.5 py-1">
-      <span className={`h-2.5 w-2.5 rounded-full ${dotClass}`} />
-      <span className="text-sm font-bold text-white">{count}</span>
+    <div className={`flex items-center gap-1.5 rounded border px-2 py-0.5 ${bgClass}`}>
+      <span className={`h-2 w-2 rounded-full ${dotClass}`} />
+      <span className="text-xs font-bold">{count}</span>
     </div>
   )
 }
