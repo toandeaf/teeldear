@@ -1,34 +1,24 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@theme {
+  --color-brand-100: #e0f2fe;
+  --color-brand-200: #bae6fd;
+  --color-brand-300: #7dd3fc;
+  --color-brand-400: #38bdf8;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --shadow-soft: 0 18px 60px -28px rgba(15, 23, 42, 0.6);
+}
+
 :root {
-    font-family: GT Pressura Mono, serif;
+  color-scheme: dark;
 }
 
-.neubrutalist-button {
-    background-color: #ffffff;
-    border: 3px solid #000000;
-    box-shadow: 5px 5px 0 #000000;
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #000000;
-    text-decoration: none;
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
+body {
+  @apply min-h-screen bg-slate-950 text-slate-100 antialiased;
 }
 
-.neubrutalist-button:hover {
-    cursor: pointer;
-    transform: translateY(-5px);
-    box-shadow: 10px 10px 0 #000000;
+#root {
+  @apply min-h-screen;
 }
-
-.neubrutalist-button:active {
-    transform: translateY(0);
-    box-shadow: 5px 5px 0 #000000;
-}
-
-.neubrutalist-notification {
-    background-color: #ffffff;
-    border: 3px solid #000000;
-    box-shadow: 2px 2px 0 #000000;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
